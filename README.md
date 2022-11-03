@@ -27,6 +27,23 @@ function room_Load()
 
 ## Script API
 
+### `DistFX.Update`
+
+```AGS Script
+import void DistFX.Update(DrawingSurface* source, DrawingSurface* dest, int effect);
+```
+
+Draws from a source surface to a destination surface using a distortion effect.
+  
+
+### `DistFX.Reset`
+
+```AGS Script
+import void DistFX.Reset();
+```
+
+Reset internal state, use on state change.
+
 
 ## License
 
