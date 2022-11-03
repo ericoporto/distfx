@@ -1,0 +1,1 @@
+var gamefiles = ['DistFX.ags', 'acsetup.cfg'];
