@@ -30,7 +30,7 @@ function room_Load()
 ### `DistFX.Update`
 
 ```AGS Script
-import void DistFX.Update(DrawingSurface* source, DrawingSurface* dest, int effect);
+void DistFX.Update(DrawingSurface* source, DrawingSurface* dest, int effect);
 ```
 
 Draws from a source surface to a destination surface using a distortion effect.
@@ -39,10 +39,37 @@ Draws from a source surface to a destination surface using a distortion effect.
 ### `DistFX.Reset`
 
 ```AGS Script
-import void DistFX.Reset();
+void DistFX.Reset();
 ```
 
 Reset internal state, use on state change.
+
+
+### `DistFX.DrawingTransparency`
+
+```AGS Script
+attribute int DistFX.DrawingTransparency;
+```
+
+Drawing Transparency, use for blurring the effects. Default is 0, range from 0 to 99.
+
+
+### `DistFX.TileWidth`
+  
+```AGS Script
+attribute int DistFX.TileWidth;
+```
+
+Distortion Tile Width, factor of source width, bigger is less resource intensive. Default is 64 pixels.
+
+
+### `DistFX.TileHeight`
+
+```AGS Script
+attribute int DistFX.TileHeight;
+```
+
+Distortion Tile Height, factor of source height, bigger is less resource intensive. Default is 1 pixel.
 
 
 ## License
