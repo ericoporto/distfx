@@ -1,4 +1,5 @@
 // DistFX Module Header
+// Version 0.1.0
 
 /// DistFX object
 struct DistFX {  

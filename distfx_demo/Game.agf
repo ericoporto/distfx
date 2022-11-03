@@ -7,7 +7,7 @@
       <AlwaysDisplayTextAsSpeech>False</AlwaysDisplayTextAsSpeech>
       <AndroidAppVersionCode>1</AndroidAppVersionCode>
       <AndroidAppVersionName>1.0.0.0</AndroidAppVersionName>
-      <AndroidApplicationId>com.mystudio.mygame</AndroidApplicationId>
+      <AndroidApplicationId>com.mythsuntold.distfx</AndroidApplicationId>
       <AndroidBuildFormat>ApkEmbedded</AndroidBuildFormat>
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
@@ -26,7 +26,7 @@
       <DebugMode>True</DebugMode>
       <DefaultRoomMaskResolution>1</DefaultRoomMaskResolution>
       <Description />
-      <DeveloperName />
+      <DeveloperName>eri0o</DeveloperName>
       <DeveloperURL />
       <DialogOptionsBackwards>False</DialogOptionsBackwards>
       <DialogOptionsBullet>0</DialogOptionsBullet>
@@ -60,7 +60,7 @@
       <OptimizeSpriteStorage>True</OptimizeSpriteStorage>
       <PixelPerfect>True</PixelPerfect>
       <PlaySoundOnScore>0</PlaySoundOnScore>
-      <ReleaseDate>2022-03-01</ReleaseDate>
+      <ReleaseDate>2022-11-03</ReleaseDate>
       <RenderAtScreenResolution>UserDefined</RenderAtScreenResolution>
       <RoomTransition>FadeOutAndIn</RoomTransition>
       <RunGameLoopsWhileDialogOptionsDisplayed>False</RunGameLoopsWhileDialogOptionsDisplayed>
