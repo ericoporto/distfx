@@ -1,0 +1,59 @@
+[size=14pt][b]DistFX[/b][/size] [color=gray][b]version 0.1.0 [/b][/color]
+
+[url="https://github.com/ericoporto/distfx/releases/download/0.1.0/distfx.scm"]Get Latest Release [b]distfx.scm[/b][/url] | [url="https://github.com/ericoporto/distfx"]GitHub Repo[/url] | [url="https://github.com/ericoporto/distfx/releases/download/0.1.0/distfx_demo.zip"]Project with Demo![/url]
+
+AGS Script Module for Distortion Effects, based on Earthbound Battle Backgrounds.
+
+[url="https://ericoporto.github.io/distfx/"][img width=640 height=400]https://user-images.githubusercontent.com/2244442/199853408-98184522-5c9c-4426-ad4f-34b698cc86ab.gif[/img][/url]
+
+[url="https://ericoporto.github.io/distfx/"]Play with the demo![/url]
+
+[size=14pt][b]Usage[/b][/size]
+
+In a room script, link before fade in and repeatedly execute, and try the example below.
+
+[code]DistFX fx; // somewhere with the same lifetime as the output surface while distorted
+Overlay* ovr;
+DynamicSprite* spr;
+
+function room_RepExec()
+{
+  fx.Update(Room.GetDrawingSurfaceForBackground(), spr.GetDrawingSurface(), 2 /* effect */);
+  ovr.Graphic = spr.Graphic;
+}
+
+function room_Load()
+{
+  if(ovr == null) {
+    spr = DynamicSprite.CreateFromBackground();
+    ovr = Overlay.CreateGraphical(0, 0, spr.Graphic, true);
+  }
+}[/code]
+
+Original Earthbound effects used a per pixel approach, but due to how AGS Script drawing performs and works, this module uses a tile based approach.
+
+[size=14pt][b]Script API[/b][/size]
+
+[font=Courier New][b]DistFX.Update[/b][/font]
+[code]void DistFX.Update(DrawingSurface* source, DrawingSurface* dest, int effect);[/code]
+Draws from a source surface to a destination surface using a distortion effect.
+
+[font=Courier New][b]DistFX.Reset[/b][/font]
+[code]void DistFX.Reset();[/code]
+Reset internal state, use on state change.
+
+[font=Courier New][b]DistFX.DrawingTransparency[/b][/font]
+[code]attribute int DistFX.DrawingTransparency;[/code]
+Drawing Transparency, use for blurring the effects. Default is 0, range from 0 to 99.
+
+[font=Courier New][b]DistFX.TileWidth[/b][/font]
+[code]attribute int DistFX.TileWidth;[/code]
+Distortion Tile Width, factor of source width, bigger is less resource intensive. Default is 64 pixels.
+
+[font=Courier New][b]DistFX.TileHeight[/b][/font]
+[code]attribute int DistFX.TileHeight;[/code]
+Distortion Tile Height, factor of source height, bigger is less resource intensive. Default is 1 pixel.
+
+[size=14pt][b]License[/b][/size]
+
+This code is licensed with MIT [url="https://github.com/ericoporto/distfx/blob/main/LICENSE"][font=Courier New]LICENSE[/font][/url].
