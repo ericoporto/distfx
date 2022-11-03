@@ -2079,14 +2079,14 @@
               <BackgroundImage>0</BackgroundImage>
               <BorderColor>2</BorderColor>
               <Clickable>True</Clickable>
-              <Height>50</Height>
+              <Height>60</Height>
               <ID>9</ID>
               <Left>20</Left>
               <Name>gEffects</Name>
               <OnClick />
               <PopupStyle>Normal</PopupStyle>
               <PopupYPos>0</PopupYPos>
-              <Top>130</Top>
+              <Top>120</Top>
               <Transparency>25</Transparency>
               <Visible>True</Visible>
               <Width>280</Width>
@@ -2107,7 +2107,7 @@
                 <MinValue>0</MinValue>
                 <Name>slider_fx</Name>
                 <OnChange>slider_fx_OnChange</OnChange>
-                <Top>12</Top>
+                <Top>10</Top>
                 <Value>0</Value>
                 <Visible>True</Visible>
                 <Width>270</Width>
@@ -2144,11 +2144,11 @@
                 <MinValue>1</MinValue>
                 <Name>slider_tsz</Name>
                 <OnChange>slider_tsz_OnChange</OnChange>
-                <Top>35</Top>
+                <Top>47</Top>
                 <Value>2</Value>
                 <Visible>True</Visible>
                 <Width>270</Width>
-                <ZOrder>3</ZOrder>
+                <ZOrder>5</ZOrder>
               </GUISlider>
               <GUILabel>
                 <Clickable>True</Clickable>
@@ -2162,10 +2162,47 @@
                 <Text>Size</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>65520</TextColor>
-                <Top>27</Top>
+                <Top>41</Top>
                 <Visible>True</Visible>
                 <Width>270</Width>
                 <ZOrder>0</ZOrder>
+              </GUILabel>
+              <GUISlider>
+                <BackgroundImage>0</BackgroundImage>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <HandleImage>0</HandleImage>
+                <HandleOffset>0</HandleOffset>
+                <Height>11</Height>
+                <ID>4</ID>
+                <Left>5</Left>
+                <Locked>False</Locked>
+                <MaxValue>99</MaxValue>
+                <MinValue>0</MinValue>
+                <Name>slider_transp</Name>
+                <OnChange>slider_transp_OnChange</OnChange>
+                <Top>32</Top>
+                <Value>0</Value>
+                <Visible>True</Visible>
+                <Width>270</Width>
+                <ZOrder>3</ZOrder>
+              </GUISlider>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>1</Font>
+                <Height>14</Height>
+                <ID>5</ID>
+                <Left>5</Left>
+                <Locked>False</Locked>
+                <Name>label_transp</Name>
+                <Text>Transparency</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>65520</TextColor>
+                <Top>26</Top>
+                <Visible>True</Visible>
+                <Width>270</Width>
+                <ZOrder>4</ZOrder>
               </GUILabel>
             </Controls>
           </GUIMain>
