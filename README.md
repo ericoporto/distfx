@@ -25,6 +25,8 @@ function room_Load()
 }
 ```
 
+Original Earthbound effects used a per pixel approach, but due to how AGS Script drawing performs and works, this module use a tile based approach.
+
 ## Script API
 
 ### `DistFX.Update`
