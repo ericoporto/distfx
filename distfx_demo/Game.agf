@@ -2145,7 +2145,7 @@
                 <Name>slider_tsz</Name>
                 <OnChange>slider_tsz_OnChange</OnChange>
                 <Top>47</Top>
-                <Value>2</Value>
+                <Value>1</Value>
                 <Visible>True</Visible>
                 <Width>270</Width>
                 <ZOrder>5</ZOrder>
