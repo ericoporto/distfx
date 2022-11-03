@@ -2122,7 +2122,7 @@
                 <Left>5</Left>
                 <Locked>False</Locked>
                 <Name>label_fxid</Name>
-                <Text xml:space="preserve">New Label</Text>
+                <Text>Effect</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>65535</TextColor>
                 <Top>3</Top>
@@ -4749,10 +4749,10 @@
             <ScriptAndHeader_Script>
               <Script>
                 <FileName>DistFX.asc</FileName>
-                <Name />
-                <Description />
-                <Author />
-                <Version />
+                <Name>distfx</Name>
+                <Description>Distortion Effects</Description>
+                <Author>eri0o</Author>
+                <Version>0.1.0</Version>
                 <Key>118763044</Key>
                 <IsHeader>False</IsHeader>
               </Script>
