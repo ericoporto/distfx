@@ -10,7 +10,7 @@ struct DistFX {
   
   // Attributes
   
-  /// Drawing Transparency, use for blurring the effects (defailt is 0, range from 0 to 99)
+  /// Drawing Transparency, use for blurring the effects (default is 0, range from 0 to 99)
   import attribute int DrawingTransparency;
   import int get_DrawingTransparency(); // $AUTOCOMPLETEIGNORE$
   import void set_DrawingTransparency(int value); // $AUTOCOMPLETEIGNORE$
