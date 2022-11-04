@@ -1,6 +1,8 @@
 # distfx
 distortion effects script module for AGS, based on Earthbound battle effects.
 
+<img src="https://user-images.githubusercontent.com/2244442/199853408-98184522-5c9c-4426-ad4f-34b698cc86ab.gif" width="640" height="400" style="image-rendering:pixelated;image-rendering:pixelated;">
+
 ## Usage
 
 In a room script, link before fade in and repeatedly execute, and try the example below.
