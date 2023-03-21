@@ -3,6 +3,6 @@
   <Name>DistFX</Name>                      <!-- set the module name -->
   <Description>Script Module for Distortion Effects</Description> <!-- set the module description -->
   <Author>eri0o</Author>                <!-- set the module author -->
-  <Version>0.1.0</Version>             <!-- set the module version -->
+  <Version>0.2.0</Version>             <!-- set the module version -->
   <Key>118763044</Key>                  <!-- set the module unique key -->
 </AGSModule>
