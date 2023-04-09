@@ -1,0 +1,25 @@
+name: Builds Game
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Package Application
+      uses: ericoporto/agstoolbox-action@main
+      with:
+        path: .
+        
+    - uses: actions/upload-artifact@v3
+      with:
+        name: agstoolbox
+        path: ./distfx/distfx_demo/Compiled
