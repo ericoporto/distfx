@@ -1,25 +1,41 @@
-name: Builds Game
+name: CI
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
+  build-and-test-windows:
+    runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-    - name: Package Application
-      uses: ericoporto/agstoolbox-action@main
-      with:
-        path: .
-        
-    - uses: actions/upload-artifact@v3
-      with:
-        name: agstoolbox
-        path: ./distfx/distfx_demo/Compiled
+      - name: gets ags-toolbox
+        run: |
+          curl -Lo atbx.exe https://github.com/ericoporto/agstoolbox/releases/download/0.4.9/atbx.exe
+          echo "${{github.workspace}}" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+
+      - name: Install AGS
+        run: |
+          atbx install editor -q distfx_demo/
+          
+      - name: Build game
+        run: |
+          atbx build distfx_demo/
+          
+      - name: Export module
+        run: |
+          atbx export script distfx_demo/ DistFX .
+
+      - name: Upload Game Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: distfx_demo
+          path: |
+            distfx_demo/Compiled/*/*
+      
+      - name: Upload Module Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: distfx_module
+          path: |
+            DistFX.scm
